@@ -1,0 +1,134 @@
+/* final-page-styles.css */
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+}
+
+.left-side {
+    flex: 1; /* Takes up 50% of the width */
+}
+
+.travel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire area */
+}
+
+.right-side {
+    flex: 1; /* Takes up 50% of the width */
+    display: flex;
+    flex-direction: column; /* Aligns content vertically */
+    justify-content: space-between; /* Distributes space between elements */
+    padding: 40px; /* Padding for the right side */
+}
+
+.content {
+    flex: 1; /* Takes up available space */
+}
+
+/* h2 {
+    margin: 0 0 10px;
+    font-weight: bold;
+} */
+ .weight{
+    font-weight:bold;
+    font-size: 30px;
+ }
+.pages{
+    color:rgb(137, 135, 135);
+    font-size:14px;
+}
+
+/* p {
+    margin: 5px 0;
+} */
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    gap: 10px; /* Space between boxes */
+    margin: 20px 0;
+}
+
+.box {
+    border: 2px solid grey;
+    background-color: white;
+    height: 100px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+.box:hover{
+    background-color: rgb(219, 216, 216);
+}
+.box:active{
+    background-color: rgb(219, 216, 216);
+}
+.box.active{
+    background-color: rgb(219, 216, 216);
+}
+.relate{
+    font-weight: bold;
+    font-size:14px;
+}
+
+.box-logo {
+    border-radius: 25px;
+    width: 50px; /* Set logo width */
+    height: 50px; /* Set logo height */
+    margin-bottom: 5px; /* Space between logo and label */
+}
+
+.box-label {
+    font-size: 14px; /* Set label font size */
+    text-align: center; /* Center text */
+}
+
+.bottom-bar {
+    display: flex;
+    align-items: center;
+}
+
+.back-button,
+.submit-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+.back-button:hover,
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.step-indicator {
+    flex: 1; /* Takes up remaining space between buttons */
+    display: flex;
+    justify-content: center; /* Centers step indicators */
+}
+
+.step {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid grey;
+    margin: 0 5px;
+}
+
+.step.completed {
+    background-color: #007BFF; /* Change color for completed step */
+}

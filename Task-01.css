@@ -1,0 +1,26 @@
+body{
+    font-family: arial;
+}
+.email ,.password{
+    display:block;
+    margin-bottom: 10px;
+    border-radius:15px;
+    border:1px solid rgb(200, 200, 200);
+    padding-left:10px;
+    height:30px;
+}
+button{
+    color:rgb(240, 237, 237);
+    height:30px;
+    background-color: black;
+    width:23%;
+    border-radius:15px;
+}
+.forgot{
+    font-weight: bold;
+    font-size:12px;
+}
+.or{
+    display:flex;
+    justify-content:center;
+}

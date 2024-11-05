@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 300px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.email, .password {
+    display: block;
+    margin: 10px auto;
+    border-radius: 15px;
+    border: 1px solid rgb(200, 200, 200);
+    padding-left: 10px;
+    height: 30px;
+    width: 100%;
+}
+
+button {
+    color: rgb(240, 237, 237);
+    height: 40px;
+    background-color: black;
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.forgot {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.or {
+    margin: 10px 0;
+}
+
+.google {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.google-logo {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.google:hover {
+    background-color: #f0f0f0;
+}
+
+.error-message {
+    font-weight: bold;
+    font-size: 12px;
+    color: red;
+    margin-top: 10px;
+}
