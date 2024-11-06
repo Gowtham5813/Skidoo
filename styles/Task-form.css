@@ -35,7 +35,7 @@ label[for="email"] {
 
 .left-side img {
     display:block;
-    width: 100%;
+    width: 98%;
     height: 100%;
     object-fit:cover;
     /* margin:0; */
@@ -48,7 +48,7 @@ label[for="email"] {
     display: flex;
     flex-direction: column; /* Aligns content vertically */
     justify-content: space-between; /* Distributes space between elements */
-    padding: 40px; /* Padding for the right side */
+    padding: 35px; /* Padding for the right side */
 }
 /* .right-side h2 {
     margin-bottom: 10px;
@@ -62,7 +62,7 @@ label[for="email"] {
 
 label {
     display: block;
-    margin-top: 15px;
+    margin-top: 30px;
     font-weight: bold;
 }
 
