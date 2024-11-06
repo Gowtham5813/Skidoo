@@ -97,13 +97,23 @@ textarea {
 }
 
 .back-button {
-    background-color: #ccc;
+    background-color: #007BFF;
+    color: white;
 }
 
 .next-button {
     background-color: #007BFF;
     color: white;
 }
+.back-button:hover,
+.next-button:hover {
+    background-color: #0056b3;
+}
+
+.back-button:active, .next-button:active {
+    transform: scale(0.95); /* Shrinks slightly on click */
+  }
+  
 
 .step-indicator {
     flex: 1; /* Takes up remaining space between buttons */
@@ -150,4 +160,26 @@ textarea {
 .person-icon {
     font-size: 18px;
 }
-
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  
+/* .progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 8px;
+    margin: 10px 0;
+  }
+  
+  .progress {
+    background-color: #007bff;
+    height: 100%;
+    transition: width 0.3s;
+  } */
+  

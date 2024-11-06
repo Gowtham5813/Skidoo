@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel Persona</title>
-    <link rel="stylesheet" href="Task-from.css" />
+    <link rel="stylesheet" href="Task-form.css" />
   </head>
   <body>
     <div class="container">
@@ -43,8 +43,8 @@
 
           <label for="date">Date Range<span class="required">*</span></label>
           <div class="date-range">
-            <input type="date" id="date" class="input-one" required />
-            <input type="date" id="date" class="input-one" required />
+            <input type="date" id="startdate" class="input-one" required />
+            <input type="date" id="enddate" class="input-one" required />
           </div>
 
           <label for="group-size"
@@ -74,14 +74,32 @@
             class="input"
           ></textarea>
 
+          <!-- /* when we have to add progress indicator */ -->
+          <!-- <div class="progress-bar">
+            <div class="progress" style="width: 33%"></div>
+          </div>  -->
+
           <div class="bottom-bar">
-            <a href="Task-exercise.html" class="back-button">Back</a>
+            <!-- <a href="Task-exercise.html" class="back-button">Back</a> -->
+            <button
+              class="back-button"
+              type="button"
+              title="Go back to the previous page"
+            >
+              Back
+            </button>
             <div class="step-indicator">
               <span class="step completed"></span>
               <span class="step"></span>
               <span class="step"></span>
             </div>
-            <button type="submit" class="next-button">Next</button>
+            <button
+              type="submit"
+              class="next-button"
+              title="Proceed to the next page"
+            >
+              Next
+            </button>
           </div>
         </form>
       </div>
@@ -91,10 +109,11 @@
       function validateForm() {
         const email = document.getElementById("email").value;
         const destination = document.getElementById("destination").value;
-        const date = document.getElementById("date").value;
+        const date = document.getElementById("startdate").value;
+        const date1 = document.getElementById("enddate").value;
         const groupSize = document.getElementById("group-size-count").value;
 
-        if (!email || !destination || !date || !groupSize) {
+        if (!email || !destination || !date || !groupSize || !date1) {
           alert("Please fill out all required fields.");
           return false;
         }
@@ -102,6 +121,12 @@
         window.location.href = "final-page.html";
         return false;
       }
+
+      document
+        .querySelector(".back-button")
+        .addEventListener("click", function () {
+          window.location.href = "Task-exercise.html";
+        });
 
       function changeGroupSize(change) {
         const groupSizeInput = document.getElementById("group-size-count");
@@ -111,6 +136,21 @@
         if (currentSize < 1) currentSize = 1;
         groupSizeInput.value = currentSize;
       }
+      const today = new Date().toISOString().split("T")[0];
+      document.getElementById("startdate").setAttribute("min", today);
+      document
+        .getElementById("startdate")
+        .addEventListener("change", function () {
+          const startDateValue = this.value;
+          const endDateInput = document.getElementById("enddate");
+          endDateInput.value = "";
+          endDateInput.setAttribute("min", startDateValue);
+        });
+
+      /* disable the next button without taking colours
+      const nextButton = document.querySelector(".next-button");
+      nextButton.disabled = true; // Initial state
+      */
     </script>
   </body>
 </html>

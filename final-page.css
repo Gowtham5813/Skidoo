@@ -114,6 +114,9 @@ body {
 .submit-button:hover {
     background-color: #0056b3;
 }
+.back-button:active, .submit-button:active {
+    transform: scale(0.95); /* Shrinks slightly on click */
+  }
 
 .step-indicator {
     flex: 1; /* Takes up remaining space between buttons */
