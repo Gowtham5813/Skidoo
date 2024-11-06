@@ -17,91 +17,96 @@
       <div class="right-side">
         <h2>Create Your Travel Persona</h2>
         <p class="pages">2 of 3 steps. Approximately 3 minutes</p>
-
-        <form id="tripForm" onsubmit="return validateForm()">
-          <label for="email"
-            >Email Address<span class="required">*</span></label
-          >
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter your email address"
-            class="input"
-            required
-          />
-
-          <label for="destination"
-            >Destination<span class="required">*</span></label
-          >
-          <input
-            type="text"
-            id="destination"
-            placeholder="Where would you like to go"
-            class="input"
-            required
-          />
-
-          <label for="date">Date Range<span class="required">*</span></label>
-          <div class="date-range">
-            <input type="date" id="startdate" class="input-one" required />
-            <input type="date" id="enddate" class="input-one" required />
-          </div>
-
-          <label for="group-size"
-            >Group Size<span class="required">*</span></label
-          >
-          <div class="group-size">
-            <button type="button" id="decrement" onclick="changeGroupSize(-1)">
-              -
-            </button>
+        <div class="data-content">
+          <form id="tripForm" onsubmit="return validateForm()">
+            <label for="email"
+              >Email Address<span class="required">*</span></label
+            >
             <input
-              type="number"
-              id="group-size-count"
-              value="1"
-              min="1"
-              readonly
+              type="email"
+              id="email"
+              placeholder="Enter your email address"
+              class="input"
+              required
             />
-            <span class="person-icon">👤</span>
-            <button type="button" id="increment" onclick="changeGroupSize(1)">
-              +
-            </button>
-          </div>
 
-          <label for="description">Describe Your Dream Trip</label>
-          <textarea
-            id="description"
-            placeholder="Tell us about your ideal vacation..."
-            class="input"
-          ></textarea>
-
-          <!-- /* when we have to add progress indicator */ -->
-          <!-- <div class="progress-bar">
-            <div class="progress" style="width: 33%"></div>
-          </div>  -->
-
-          <div class="bottom-bar">
-            <!-- <a href="Task-exercise.html" class="back-button">Back</a> -->
-            <button
-              class="back-button"
-              type="button"
-              title="Go back to the previous page"
+            <label for="destination"
+              >Destination<span class="required">*</span></label
             >
-              Back
-            </button>
-            <div class="step-indicator">
-              <span class="step completed"></span>
-              <span class="step"></span>
-              <span class="step"></span>
+            <input
+              type="text"
+              id="destination"
+              placeholder="Where would you like to go"
+              class="input"
+              required
+            />
+
+            <label for="date">Date Range<span class="required">*</span></label>
+            <div class="date-range">
+              <input type="date" id="startdate" class="input-one" required />
+              <input type="date" id="enddate" class="input-one" required />
             </div>
-            <button
-              type="submit"
-              class="next-button"
-              title="Proceed to the next page"
+
+            <label for="group-size"
+              >Group Size<span class="required">*</span></label
             >
-              Next
-            </button>
-          </div>
-        </form>
+            <div class="group-size">
+              <button
+                type="button"
+                id="decrement"
+                onclick="changeGroupSize(-1)"
+              >
+                -
+              </button>
+              <input
+                type="number"
+                id="group-size-count"
+                value="1"
+                min="1"
+                readonly
+              />
+              <span class="person-icon">👤</span>
+              <button type="button" id="increment" onclick="changeGroupSize(1)">
+                +
+              </button>
+            </div>
+
+            <label for="description">Describe Your Dream Trip</label>
+            <textarea
+              id="description"
+              placeholder="Tell us about your ideal vacation..."
+              class="input"
+            ></textarea>
+
+            <!-- /* when we have to add progress indicator */ -->
+            <!-- <div class="progress-bar">
+              <div class="progress" style="width: 33%"></div>
+            </div>  -->
+
+            <div class="bottom-bar">
+              <!-- <a href="Task-exercise.html" class="back-button">Back</a> -->
+              <button
+                class="back-button"
+                type="button"
+                title="Go back to the previous page"
+              >
+                Back
+              </button>
+              <div class="step-indicator">
+                <span class="step completed"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+              </div>
+              <button
+                type="submit"
+                class="next-button"
+                title="Proceed to the next page"
+              >
+                Next
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
 

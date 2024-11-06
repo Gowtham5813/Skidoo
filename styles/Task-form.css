@@ -14,9 +14,9 @@ body {
     margin-left:5px;
     /* margin-bottom:0; */
 }
-h2{
+/* h2{
     margin-bottom:0;
-}
+} */
 
 label[for="email"] {
     margin-top: 0;
@@ -39,6 +39,9 @@ label[for="email"] {
     height: 100%;
     object-fit:cover;
     /* margin:0; */
+}
+.data-content{
+    margin-top:0;
 }
 .right-side{
     flex: 1; /* Takes up 50% of the width */
