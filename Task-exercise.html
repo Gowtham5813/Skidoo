@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
-    <link rel="stylesheet" href="Task-exercise.css">
-</head>
-<body>
+    <link rel="stylesheet" href="Task-exercise.css" />
+  </head>
+  <body>
     <div class="container">
-        <h2>Welcome</h2>
-        <p>New to Mindtrip? Sign up</p>
-        <input type="text" placeholder="Email" class="email" id="email">
-        <input type="password" placeholder="Password" class="password" id="password">
-        <button class="continue" id="continueButton">Continue</button>
-        <p class="forgot">Forgot password?</p>
-        <p class="or">or</p>
-        <button class="google">
-            <img src="images/google-log.jpeg" alt="Google Logo" class="google-logo">
-            Continue with Google
-        </button>
-        <p class="error-message" id="error-message"></p>
+      <h2>Welcome</h2>
+      <p>New to Mindtrip? Sign up</p>
+      <input type="text" placeholder="Email" class="email" id="email" />
+      <input
+        type="password"
+        placeholder="Password"
+        class="password"
+        id="password"
+      />
+      <button class="continue" id="continueButton">Continue</button>
+      <p class="forgot">Forgot password?</p>
+      <p class="or">or</p>
+      <button class="google">
+        <img
+          src="images/google-log.jpeg"
+          alt="Google Logo"
+          class="google-logo"
+        />
+        Continue with Google
+      </button>
+      <p class="error-message" id="error-message"></p>
     </div>
 
     <script>
-        document.getElementById('continueButton').addEventListener('click', function() {
-            const email = document.getElementById('email').value.trim();
-            const password = document.getElementById('password').value.trim();
-            const errorMessage = document.getElementById('error-message');
+      document
+        .getElementById("continueButton")
+        .addEventListener("click", function () {
+          const email = document.getElementById("email").value.trim();
+          const password = document.getElementById("password").value.trim();
+          const errorMessage = document.getElementById("error-message");
 
-            // Clear previous error messages
-            errorMessage.textContent = '';
+          errorMessage.textContent = "";
 
-            // Validate input
-            if (!email || !password) {
-                errorMessage.textContent = 'Both email and password are mandatory.';
-                errorMessage.style.color = 'red';
-            } else {
-                // Proceed with form submission or further actions
-                window.location.href='Task-form.html'
-            }
+          if (!email || !password) {
+            errorMessage.textContent = "Both email and password are mandatory.";
+            errorMessage.style.color = "red";
+          } else {
+            window.location.href = "Task-form.html";
+          }
         });
     </script>
-</body>
+  </body>
 </html>

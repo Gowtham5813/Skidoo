@@ -1,84 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel Persona</title>
-    <link rel="stylesheet" href="Task-from.css">
-</head>
-<body>
-    <!-- <div class="container"> -->
-        <!-- Left Side with Image -->
-        <div class="left-side">
-            <img src="images/travel1.png" alt="Travel Image">
-        </div>
-        
-        <!-- Right Side with Form Content -->
-        <div class="right-side">
-            <h2>Create Your Travel Persona</h2>
-            <p>2 of 3 steps. Approximately 3 minutes</p>
-            
-            <form id="tripForm" onsubmit="return validateForm()">
-                <label for="email">Email Address<span class="required">*</span></label>
-                <input type="email" id="email" placeholder="Enter your email address" class="input" required>
-            
-                <label for="destination">Destination<span class="required">*</span></label>
-                <input type="text" id="destination" placeholder="Where would you like to go" class="input" required>
-            
-                <label for="date">Date Range<span class="required">*</span></label>
-                <input type="date" id="date" class="input" required>
-            
-                <label for="group-size">Group Size<span class="required">*</span></label>
-                <div class="group-size">
-                    <button type="button" id="decrement" onclick="changeGroupSize(-1)">-</button>
-                    <input type="number" id="group-size-count" value="1" min="1" readonly>
-                    <span class="person-icon">👤</span>
-                    <button type="button" id="increment" onclick="changeGroupSize(1)">+</button>
-                </div>
-            
-                <label for="description">Describe Your Dream Trip</label>
-                <textarea id="description" placeholder="Tell us about your ideal vacation..." class="input"></textarea>
-            
-                <div class="bottom-bar">
-                    <a href="Task-exercise.html" class="back-button">Back</a>
-                    <div class="step-indicator">
-                        <span class="step completed"></span>
-                        <span class="step"></span>
-                        <span class="step"></span>
-                    </div>
-                    <button type="submit" class="next-button">Next</button>
-                </div>
-            </form>
-           
-          </div> 
-          
-        </div>
-            <script>
-                function validateForm() {
-                    const email = document.getElementById("email").value;
-                    const destination = document.getElementById("destination").value;
-                    const date = document.getElementById("date").value;
-                    const groupSize = document.getElementById("group-size-count").value;
-            
-                    if (!email || !destination || !date || !groupSize) {
-                        alert("Please fill out all required fields.");
-                        return false; // Prevent form submission
-                    }
-            
-                    // If all fields are filled, redirect to the next page
-                    window.location.href = "final-page.html"; 
-                    return false; // Prevent default form submission
-                }
-            
-                function changeGroupSize(change) {
-                    const groupSizeInput = document.getElementById("group-size-count");
-                    let currentSize = parseInt(groupSizeInput.value);
-                    currentSize += change;
-            
-                    if (currentSize < 1) currentSize = 1; // Prevent decrementing below 1
-                    groupSizeInput.value = currentSize;
-                }
-            </script>
-    
-</body>
+    <link rel="stylesheet" href="Task-from.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Side with Image -->
+      <div class="left-side">
+        <img src="images/travel1.png" alt="Travel Image" class="travel-image" />
+      </div>
+
+      <!-- Right Side with Form Content -->
+      <div class="right-side">
+        <h2>Create Your Travel Persona</h2>
+        <p>2 of 3 steps. Approximately 3 minutes</p>
+
+        <form id="tripForm" onsubmit="return validateForm()">
+          <label for="email"
+            >Email Address<span class="required">*</span></label
+          >
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email address"
+            class="input"
+            required
+          />
+
+          <label for="destination"
+            >Destination<span class="required">*</span></label
+          >
+          <input
+            type="text"
+            id="destination"
+            placeholder="Where would you like to go"
+            class="input"
+            required
+          />
+
+          <label for="date">Date Range<span class="required">*</span></label>
+          <div class="date-range">
+            <input type="date" id="date" class="input-one" required />
+            <input type="date" id="date" class="input-one" required />
+          </div>
+
+          <label for="group-size"
+            >Group Size<span class="required">*</span></label
+          >
+          <div class="group-size">
+            <button type="button" id="decrement" onclick="changeGroupSize(-1)">
+              -
+            </button>
+            <input
+              type="number"
+              id="group-size-count"
+              value="1"
+              min="1"
+              readonly
+            />
+            <span class="person-icon">👤</span>
+            <button type="button" id="increment" onclick="changeGroupSize(1)">
+              +
+            </button>
+          </div>
+
+          <label for="description">Describe Your Dream Trip</label>
+          <textarea
+            id="description"
+            placeholder="Tell us about your ideal vacation..."
+            class="input"
+          ></textarea>
+
+          <div class="bottom-bar">
+            <a href="Task-exercise.html" class="back-button">Back</a>
+            <div class="step-indicator">
+              <span class="step completed"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
+            <button type="submit" class="next-button">Next</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function validateForm() {
+        const email = document.getElementById("email").value;
+        const destination = document.getElementById("destination").value;
+        const date = document.getElementById("date").value;
+        const groupSize = document.getElementById("group-size-count").value;
+
+        if (!email || !destination || !date || !groupSize) {
+          alert("Please fill out all required fields.");
+          return false;
+        }
+
+        window.location.href = "final-page.html";
+        return false;
+      }
+
+      function changeGroupSize(change) {
+        const groupSizeInput = document.getElementById("group-size-count");
+        let currentSize = parseInt(groupSizeInput.value);
+        currentSize += change;
+
+        if (currentSize < 1) currentSize = 1;
+        groupSizeInput.value = currentSize;
+      }
+    </script>
+  </body>
 </html>
